@@ -1,0 +1,34 @@
+{
+  "name": "Ruby controls",
+  "description": "lorem ipsum",
+  "keywords": [
+    "Ruby"
+  ],
+  "website": "https://www.github.com/febryhadinata",
+  "repository": "https://github.com/febryhadinata/ruby-controls",
+  "logo": "",
+  "success_url": "",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate db:seed"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "",
+      "generator": ""
+    },
+    "WEB_CONCURRENCY": {
+      "description": "",
+      "value": ""
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    "openredis",
+    "mongolab:shared-single-small"
+  ],
+  "buildpacks": [
+    {
+      "url": ""
+    }
+  ]
+}
