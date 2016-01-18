@@ -12,13 +12,4 @@
     "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   "image": "heroku/ruby",
-  "addons": [
-    "openredis",
-    "mongolab:shared-single-small"
-  ],
-  "buildpacks": [
-    {
-      "url": ""
-    }
-  ]
 }
