@@ -11,5 +11,5 @@
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate db:seed"
   },
-  "image": "heroku/ruby",
+  "image": "heroku/ruby"
 }
