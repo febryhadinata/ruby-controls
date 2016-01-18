@@ -11,16 +11,6 @@
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate db:seed"
   },
-  "env": {
-    "SECRET_TOKEN": {
-      "description": "",
-      "generator": ""
-    },
-    "WEB_CONCURRENCY": {
-      "description": "",
-      "value": ""
-    }
-  },
   "image": "heroku/ruby",
   "addons": [
     "openredis",
