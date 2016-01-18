@@ -1,18 +1,14 @@
 <div class="login">
   <div class="container">
-    <div class="form">
-
-    <h1>Sign up</h1>
-
+    <div class="form-signin">
+    <h1 class="form-signin-heading">Sign up</h1>
     <%= form_for(@user) do |f| %>
-      <%= f.text_field :first_name, placeholder: "First name" %>
-      <%= f.text_field :last_name, placeholder: "Last name" %>
-      <%= f.email_field :email, placeholder: "Email" %>
-      <%= f.password_field :password, placeholder: "Password" %>
-      <%= f.submit "Create an account", class: "btn-submit" %>
+      <%= f.text_field :first_name, placeholder: "First name", class: "form-control" %> <br />
+      <%= f.text_field :last_name, placeholder: "Last name", class: "form-control" %><br />
+      <%= f.email_field :email, placeholder: "Email", class: "form-control" %><br />
+      <%= f.password_field :password, placeholder: "Password", class: "form-control" %><br />
+      <%= f.submit "Create an account", class: "btn btn-primary text-center" %>
     <% end %>
-
-  
     </div>
   </div>
 </div>
