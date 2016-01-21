@@ -1,8 +1,44 @@
+<html>
+<head>
+  <%= javascript_include_tag "users" %>
+  <script>
+   $(document).ready(function() {
+    /*$('#login').submit(function() {
+    	alert('a');
+    });
+    
+    $('#login').bootstrapValidator({
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'user[first_name]': {
+                validators: {
+                    notEmpty: {
+                        message: 'The first name is required and cannot be empty'
+                    }
+                }
+            },
+            'user[password]': {
+                validators: {
+                    notEmpty: {
+                        message: 'The last name is required and cannot be empty'
+                    }
+                }
+            }
+        }
+    });*/
+});
+  </script>
+</head>  
+
 <div class="login">
   <div class="container">
     <div class="form-signin">
     <h1 class="form-signin-heading">Sign up</h1>
-    <%= form_for(@user) do |f| %>
+    <%= form_for @user, html: { id: "login" } do |f| %>
       <%= f.text_field :first_name, placeholder: "First name", class: "form-control" %> <br />
       <%= f.text_field :last_name, placeholder: "Last name", class: "form-control" %><br />
       <%= f.email_field :email, placeholder: "Email", class: "form-control" %><br />
@@ -12,3 +48,5 @@
     </div>
   </div>
 </div>
+
+</html>
