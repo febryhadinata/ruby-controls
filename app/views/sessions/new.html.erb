@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>  
+
+    <div class="login">
+      <div class="container">
+        <div class="form-signin">
+        <h1 class="form-signin-heading">Login</h1>
+        <%= form_for(:session, url: login_path) do |f| %>
+          <%= f.email_field :email, placeholder: "Email", class: "form-control" %><br />
+          <%= f.password_field :password, placeholder: "Password", class: "form-control" %><br />
+          <%= f.submit "Login", class: "btn btn-submit btn-primary text-center" %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+</html>
