@@ -11,22 +11,11 @@ class UsersController < ApplicationController
       redirect_to root_url
     else
       redirect_to register_url
-      # redirect_to register_url, :flash => { :error => "Insufficient rights!" }
-      # redirect_to(register_url, {:flash => { :error => "Insufficient rights!" }})
-      #respond_to do |format|
-      #  format.html { redirect_to register_url, :alert => "An Error Occurred! #{@user.errors[:base].to_s}" }
-      #  format.json { head : }
-      #end
     end
   end
 
   private
-  def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password)
-  end
-
-  # def testjsonAPI
-  #    @user = User.all
-  #    render json: @user
-  # end
+    def user_params
+        params.require(:user).permit(:first_name, :last_name, :email, :password)
+    end
 end
