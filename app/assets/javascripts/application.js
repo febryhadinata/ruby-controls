@@ -16,3 +16,9 @@
 //= require bootstrap.min
 //= require_tree .
 
+$(document).ready(function() {
+     /*$('#login').submit(function() {
+         alert('e');
+     });*/
+    //alert('in application js');
+});
