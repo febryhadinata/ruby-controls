@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   # get 'login' => 'sessions#new'
   def new
   end
@@ -14,11 +13,10 @@ class SessionsController < ApplicationController
       redirect_to '/login'
     end
   end
-  
+
   # delete 'logout' => 'sessions#destroy'
   def destroy
     session[:user_id] = nil
     redirect_to login_url
   end
-
 end

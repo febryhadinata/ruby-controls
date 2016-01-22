@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   # get 'signup' => 'users#new', as: 'register'
   def new
      @user = User.new
@@ -30,5 +29,4 @@ class UsersController < ApplicationController
   #    @user = User.all
   #    render json: @user
   # end
-
 end
