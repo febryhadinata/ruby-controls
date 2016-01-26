@@ -20,5 +20,9 @@ $(document).ready(function() {
      /*$('#login').submit(function() {
          alert('e');
      });*/
+
+     /* -- Module Brand */
     //alert('in application js');
 });
+
+
