@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
+    # ... remove session if can't found any user id
+    @user = User.find_by(id: session[:user_id]) if session[:user_id]
+    session[:user_id] = nil unless @user
+
+    # ... set current user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 

@@ -12,13 +12,52 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
 //= require bootstrap.min
+//= require jquery.min
+//= require bootstrap-table
 //= require_tree .
 
 $(document).ready(function() {
      /*$('#login').submit(function() {
          alert('e');
      });*/
+
+     /* -- Module Brand */
     //alert('in application js');
+
+     $(".dropdown-toggle").dropdown();
+
+
+     $(function () {
+        $('#table').bootstrapTable({
+            idField: 'name',
+            url: 'https://ruby-as-furni-febryhadinata.c9users.io/brands.json',
+            columns: [{
+                field: 'name',
+                title: 'Name'
+            }, {
+                field: 'stargazers_count',
+                title: 'Stars',
+                editable: {
+                    type: 'text'
+                }
+            }, {
+                field: 'forks_count',
+                title: 'Forks',
+                editable: {
+                    type: 'text'
+                }
+            }, {
+                field: 'description',
+                title: 'Description',
+                editable: {
+                    type: 'textarea'
+                }
+            }]
+        });
+        });
+
+
 });
