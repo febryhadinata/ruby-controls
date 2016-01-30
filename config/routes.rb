@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'etcs#index'
+  root 'dashboards#index'
 
   resources :users, :brands
 
