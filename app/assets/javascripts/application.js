@@ -17,6 +17,10 @@
 //= require bootstrap.min
 //= require jquery.min
 //= require bootstrap-table
+//= require adminlte
+//= require jQuery-2.1.4.min
+//= require app
+//= require app.min
 //= require_tree .
 
 $(document).ready(function() {
